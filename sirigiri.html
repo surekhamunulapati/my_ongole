@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Giri Temple</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            transition: background 0.3s, color 0.3s;
+        }
+        .temple-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 40px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .temple-img {
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .temple-img:hover {
+            transform: scale(1.05);
+        }
+        .temple-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #6c757d;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .temple-text h3 {
+            color: #343a40;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .temple-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .read-more-content {
+            display: none;
+        }
+        .btn-toggle {
+            display: block;
+            margin-top: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn-toggle:hover {
+            background-color: #0056b3;
+        }
+        .dark-mode {
+            background-color: #343a40;
+            color: white;
+        }
+        .dark-mode .temple-container {
+            background: #444;
+            color: white;
+        }
+        .dark-mode .temple-text h3, 
+        .dark-mode .temple-text p {
+            color: white;
+        }
+        .dark-mode .btn-toggle {
+            background-color: #f8f9fa;
+            color: black;
+        }
+        .align{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="temple-container">
+            <h1 class="temple-title">Sri Giri Temple</h1>
+            <div class="row align-items-center">
+                <!-- Image on Left -->
+                <div class="col-md-5">
+                    <img src="../IMAGES/srigiri temple.jpeg" alt="Sri Giri Temple" class="img-fluid temple-img">
+                </div>
+                <!-- Text on Right -->
+                <div class="col-md-7 temple-text">
+                    <h3>Dedicated to Lord Venkateswara</h3>
+                    <p class = "align">A sacred Hindu temple devoted to Lord Vishnu's incarnation, <span class="highlight">Lord Venkateswara</span>.</p>
+                    <p class = "align"><span class="highlight">Third Most Significant Venkateswara Temple in Andhra Pradesh</span>, after Tirumala Tirupati and Dwaraka Tirumala.</p>
+                    <p class = "align"><span class="highlight">Location:</span> Situated on Srigiri Hill, Seetha Ram Puram, Devuni Cheru, Ongole.</p>
+                    
+                    <div class="read-more-content">
+                        <p class = "align"><span class="highlight">Established:</span> 1997, built under the leadership of Sri Aluru Venkata Ramana Rao with support from his family and friends.</p>
+                        <p class = "align">The temple was constructed under the guidance of Sri Aluru Venkata Ramana Rao, the chief promoter of the Neeraja Group of Companies, with support from his brothers and friends.</p>
+                        <p class = "align">The consecration (<span class="highlight">Maha Pratishta</span>) of the temple was completed in 1997, making it a significant pilgrimage site for devotees.</p>
+                        <p class = "align">Daily rituals at the temple commence with the <span class="highlight">'Prabhodhotsavam'</span> or awakening ceremony at <strong>5 AM</strong>, which attracts many devotees.</p>
+                        <p class = "align">Additionally, the temple follows the <span class="highlight">Vaikhanasa Agama tradition</span> for its rituals and festivals
+                        The temple was constructed under the guidance of Sri Aluru Venkata Ramana Rao, the chief promoter of the Neeraja Group of Companies, with support from his brothers and friends. The consecration (Maha Pratishta) of the temple was completed in 1997, and it has since become a significant pilgrimage site for devotees.
+                        Daily rituals at the temple commence with the 'Prabhodhotsavam' or awakening ceremony at 5 AM, which is a notable event attracting many devotees. Additionally, the temple follows the Vaikhanasa Agama tradition for its rituals and festivals
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <br>
+            <a href="index.html" class="back-button">Back</a>
+
+            <!-- Dark Mode Toggle -->
+            <button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleReadMore() {
+            let content = document.querySelector(".read-more-content");
+            let button = document.querySelector(".btn-toggle");
+            
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.textContent = "Read Less";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Read More";
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

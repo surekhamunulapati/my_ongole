@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mallavaram Dam</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            transition: background 0.3s, color 0.3s;
+        }
+        .temple-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 40px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .temple-img {
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .temple-img:hover {
+            transform: scale(1.05);
+        }
+        .temple-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #6c757d;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .temple-text h3 {
+            color: #343a40;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .temple-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .read-more-content {
+            display: none;
+        }
+        .btn-toggle {
+            display: block;
+            margin-top: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            
+        }
+        .btn-toggle:hover {
+            background-color: #0056b3;
+        }
+        .dark-mode {
+            background-color: #343a40;
+            color: white;
+        }
+        .dark-mode .temple-container {
+            background: #444;
+            color: white;
+        }
+        .dark-mode .temple-text h3, 
+        .dark-mode .temple-text p {
+            color: white;
+        }
+        .dark-mode .btn-toggle {
+            background-color: #f8f9fa;
+            color: black;
+        }
+        .align{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="temple-container">
+           
+            <div class="row align-items-center">
+                <!-- Image on Left -->
+                <div class="col-md-5">
+                    <img src="../IMAGES/bulls.jpg" alt="Sri Giri Temple" class="img-fluid temple-img">
+                </div>
+                <!-- Text on Right -->
+                <div class="col-md-7 temple-text">
+                    <h2 class="text-primary">About Ongole City</h2>
+
+                    <h3>Geography & Administration
+                    </h3>
+                <p class = "align">Ongole is the headquarters of Prakasam district.
+
+          It is located on the southeastern coast of India, near the Bay of Bengal.
+
+                The city is well connected by road and rail, with the NH-16 (Chennai-Kolkata highway) passing through it.
+
+                </p>
+            </div>
+        </div>
+        
+        <h3 class="text-secondary">Historical Significance
+        </h3>
+        <p class = "align">Ongole has ancient roots, dating back to the Maurya and Satavahana dynasties.
+
+            It was historically ruled by the Pallavas, Cholas, and Vijayanagara kings.
+            
+            The famous Chennakesava Swamy Temple, built during the Vijayanagara era, is a major historical site.
+            
+            
+            </p>
+
+        
+        <h4>Ongole Cattle (Ongole Bulls)
+        </h4>
+        <p class = "align">The city is internationally famous for the Ongole breed of cattle.
+
+            These bulls are known for their strength, resistance to diseases, and high milk yield.
+            
+            Ongole cattle are exported to various countries for breeding purposes.
+            </p>
+        
+        <h4>Economy & Industries
+        </h4>
+        <p class = "align">Agriculture is a major occupation, with crops like paddy, tobacco, and pulses grown here.
+
+            The city has granite industries, producing high-quality black galaxy granite, which is exported worldwide.
+            
+            Trading and business hubs flourish in the city due to its connectivity.
+            
+            </p>
+        
+        <h4>Education & Institutions
+        </h4>
+        <p class = "align">Ongole has reputed institutions like Rao Bahadur Y. Mahabaleshwarappa Engineering College, QIS Institute of Technology, and other schools and colleges.
+
+            Many students from Ongole pursue higher education in engineering, medicine, and management.
+            </p>
+        
+        <h4>Tourism & Attractions
+        </h4>
+        <p class = "align">Kothapatnam Beach – A serene beach near Ongole.
+
+            Chennakesava Swamy Temple – A famous pilgrimage site.
+            
+            Vodarevu Beach – Another beautiful coastal attraction nearby.
+            
+            Bhavanasi Lake – A scenic spot for nature lovers.
+            </p>
+        
+        <h4>Transport & Connectivity
+        </h4>
+        <p class = "align">Railway: Ongole Railway Station is an important station on the Chennai-Howrah railway line.
+
+            Road: NH-16 passes through Ongole, making road transport convenient.
+            
+            Air: The nearest airport is Vijayawada International Airport, about 150 km away.
+            </p>
+        
+        
+            <a href="index.html" class="back-button">Back</a>
+        <!-- Dark Mode Toggle -->
+         <button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+                    
+    </div>
+                    
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleReadMore() {
+            let content = document.querySelector(".read-more-content");
+            let button = document.querySelector(".btn-toggle");
+            
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.textContent = "Read Less";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Read More";
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
