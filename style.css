@@ -1,0 +1,529 @@
+
+/* Prevent horizontal scrolling on the main body of the page */
+body {
+    overflow-x: hidden;
+}
+/* Style for the container holding district cards */
+.districts {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Space between the cards */
+    margin-top: 30px; /* Top margin for spacing */
+}
+/* Style for individual district cards */
+.district-card {
+    background: white; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Hide content that goes beyond the card boundaries */
+    width: 250px; /* Fixed width for each card */
+    text-align: center; /* Center text within the card */
+}
+/* Style for images within district cards */
+.district-card img {
+    width: 100%; /* Make the image fill the width of the card */
+    height: 150px; /* Fixed height for the images */
+    object-fit: cover; /* Scale and crop the image to cover the area */
+}
+/* Style for the heading within district cards */
+.district-card h5 {
+    padding: 10px; /* Padding around the heading text */
+    font-size: 18px; /* Font size of the heading */
+    font-weight: bold; /* Make the heading text bold */
+}
+/* Style for the announcement bar at the top */
+.announcement-bar {
+    background-color: #28a745; /* Green background color */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 5px; /* Padding around the text */
+    font-weight: bold; /* Make the text bold */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+/* Style for the moving text within the announcement bar */
+.moving-text {
+    display: inline-block; /* Allows setting width and height */
+    animation: marquee 15s linear infinite; /* Apply marquee animation */
+    padding-top: 5px ; /* Top padding */
+    padding-bottom: 3px; /* Bottom padding */
+}
+
+/* Keyframes for the marquee animation */
+@keyframes marquee {
+    from {
+        transform: translateX(100%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-100%); /* End at the left */
+    }
+}
+/* Style for the header section */
+.header {
+    background: linear-gradient(to right, #004aad, #007bff); /* Gradient background */
+    padding: 10px 0; /* Vertical padding */
+    color: white; /* White text color */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items in the center */
+    padding-left: 20px; /* Left padding */
+    padding-right: 20px; /* Right padding */
+}
+/* Style for the logo container in the header */
+.header .logo img {
+    max-height: 60px; /* Maximum height of the logo image */
+}
+/* Style for the title in the header */
+.header .title {
+    font-size: 20px; /* Font size of the title */
+    font-weight: bold; /* Make the title bold */
+    margin-left: 15px; /* Left margin for spacing from the logo */
+}
+/* Style for the navigation bar */
+.navbar {
+    background-color: #004aad; /* Dark blue background color */
+}
+/* Style for navigation items */
+.navbar-nav .nav-item {
+    margin-right: 10px; /* Right margin between navigation items */
+}
+/* Style for navigation links */
+.navbar-nav .nav-link {
+    color: white !important; /* White text color, !important overrides other styles */
+    font-weight: bold; /* Make the text bold */
+    transition: 0.3s; /* Smooth transition for hover effects */
+    padding: 0.7rem 1rem !important; /* Padding around the link text */
+}
+/* Style for navigation links on hover */
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important; /* Yellow color on hover */
+}
+/* Style for the dropdown menu */
+.dropdown-menu {
+    background-color: #004aad; /* Dark blue background color */
+    border: none; /* Remove the border */
+}
+/* Style for links within the dropdown menu */
+.dropdown-menu a {
+    color: white !important; /* White text color */
+    padding: 0.5rem 1.5rem; /* Padding around the link text */
+    display: block; /* Make each link a block element */
+}
+/* Style for links within the dropdown menu on hover */
+.dropdown-menu a:hover {
+    background-color: #007bff; /* Light blue background on hover */
+}
+/* Style for the officials section */
+.officials-section {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    gap: 20px; /* Space between official cards */
+    padding: 20px; /* Padding around the section */
+}
+/* Style for individual official cards */
+.official-card {
+    background: white; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px; /* Padding inside the card */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    text-align: justify; /* Justify text within the card */
+    height: 100%; /* Make the card take full available height */
+}
+/* Style for images within official cards */
+.official-card img {
+    border-radius: 0%; /* No rounded corners for the image */
+    width: 100px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    object-fit: cover; /* Scale and crop the image */
+    margin-right: 15px; /* Right margin for spacing from text */
+}
+/* Style for the heading within official cards */
+.official-card h5 {
+    font-size: 16px; /* Font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    margin-bottom: 5px; /* Bottom margin for spacing */
+}
+/* Style for paragraphs within official cards */
+.official-card p {
+    font-size: 14px; /* Font size of the paragraph */
+    margin-bottom: 5px; /* Bottom margin for spacing */
+}
+/* Style for the event section */
+.event-section {
+    background: #f8f9fa; /* Light gray background */
+    padding: 20px; /* Padding around the section */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 20px; /* Top margin for spacing */
+}
+/* Style for images with a specific height constraint */
+.imgheight{
+    max-height: 400px; /* Maximum height of the image */
+    width: 100%; /* Make the image fill the width */
+    object-fit: cover; /* Scale and crop the image */
+}
+/* map css */
+.map-section {
+    padding: 20px; /* Padding around the map section */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Style for the container holding the map and places */
+.map-1 {
+    display: flex; /* Use flexbox for layout */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between the map and places */
+    max-width: 1200px; /* Maximum width of the container */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center items horizontally on smaller screens */
+}
+
+/* Style for the Ongole map container */
+.ongolemaps {
+    width: 100%; /* Make it fill the parent width */
+    max-width: 400px; /* Maximum width of the map */
+    height: auto; /* Maintain aspect ratio */
+    min-width: 250px; /* Minimum width of the map */
+    border-radius: 15px; /* Rounded corners for the map */
+    overflow: hidden; /* Hide content outside the rounded borders */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow for the map */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+/* Hover effect for the Ongole map */
+.ongolemaps:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+/* Style for the image inside the Ongole map container */
+.ongolemaps img {
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Scale and crop the image */
+}
+
+/* Style for the container holding famous places */
+.places {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Create responsive columns */
+    gap: 10px; /* Space between place items */
+    justify-content: center; /* Center items horizontally */
+    max-width: 600px; /* Maximum width of the places container */
+    width: 100%; /* Make the container responsive */
+}
+
+/* Style for individual place links */
+.place a {
+    display: block; /* Make the link a block element */
+}
+
+/* Style for images of famous places */
+.place img {
+    width: 100%; /* Fill the container width */
+    height: 120px; /* Fixed height for place images */
+    border-radius: 10px; /* Rounded corners for place images */
+    object-fit: cover; /* Scale and crop the image */
+    cursor: pointer; /* Indicate it's clickable */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for place images */
+}
+
+/* Hover effect for place images */
+.place img:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+/* ongle places to visit  */
+.places-in-ongole-tovisit {
+    text-align: center; /* Center text in this section */
+    margin-top: 20px; /* Top margin for spacing */
+    padding: 15px; /* Padding around the section */
+}
+.places-in-ongole-tovisit-list {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive columns for place cards */
+    gap: 20px; /* Space between place cards */
+    justify-content: center; /* Center cards horizontally */
+    padding: 20px; /* Padding around the list of cards */
+}
+.places-in-ongole-tovisit-card {
+    position: relative; /* For potential absolute positioning of elements within */
+    width: 100%; /* Fill the container width */
+    max-width: 200px; /* Maximum width of each card */
+    text-align: center; /* Center text within the card */
+    cursor: pointer; /* Indicate it's clickable */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    padding: 10px; /* Padding inside the card */
+    margin: 0 auto; /* Center the cards horizontally */
+}
+.places-in-ongole-tovisit-card img {
+    width: 100%; /* Fill the card width */
+    height: 150px; /* Fixed height for the images */
+    border-radius: 10px; /* Rounded corners for the images */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions for hover effects */
+    object-fit: cover; /* Scale and crop the image */
+}
+.places-in-ongole-tovisit-card:hover img {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+.places-in-ongole-tovisit-card h5 {
+    margin-top: 10px; /* Top margin for the heading */
+    font-size: 16px; /* Font size of the heading */
+}
+
+/* Style to justify text */
+.align{
+    text-align: justify;
+}
+/* Style for the dropdown menu (initially hidden) */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute; /* Positioned relative to its closest positioned ancestor */
+    z-index: 1000; /* Ensures it's above other elements */
+    float: none; /* Override default floating */
+    min-width: 10rem; /* Minimum width of the dropdown */
+    padding: .5rem 0; /* Vertical padding */
+    margin: .125rem 0 0; /* Top margin */
+    font-size: 1rem; /* Font size */
+    color: #fff; /* White text color */
+    text-align: left; /* Align text to the left */
+    list-style: none; /* Remove bullet points */
+    background-color: #004aad; /* Dark blue background */
+    background-clip: padding-box; /* Prevent background from painting over the border */
+    border-radius: .25rem; /* Rounded corners */
+}
+
+/* Show the dropdown menu on hover of the parent dropdown element */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* Style for a custom section */
+.custom-section {
+    padding: 15px; /* Padding around the section */
+    text-align: center; /* Center text */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #007bff; /* Light blue background */
+    color: white; /* White text color */
+    margin-top: 20px; /* Top margin */
+}
+/* Style for images within the custom section */
+.custom-section img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 10px; /* Top margin for the image */
+}
+/* Text Zoom Out Effect */
+.custom-section h2, .custom-section p {
+    transition: transform 0.3s ease-out-in; /* Smooth transition for transform property */
+}
+
+/* Hover effect for text in the custom section */
+.custom-section h2:hover, .custom-section p:hover {
+    transform: scale(0.9); /* Slightly scale down on hover */
+}
+/* Style for the announcement bar */.announcement-bar {
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent text from wrapping */
+    background: #3ea51f; /* Green background */
+    padding: 5px 0; /* Vertical padding */
+    font-size: 16px; /* Adjusted font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    color: white; /* White text color */
+}
+
+/* Style for the moving text within the announcement bar */
+.moving-text {
+    display: inline-block; /* Allows setting width and height */
+    animation: marquee 15s linear infinite; /* Apply marquee animation */
+    padding-top: 5px ; /* Top padding */
+    padding-bottom: 3px; /* Bottom padding */
+}
+
+/* Keyframes for the marquee animation */
+@keyframes marquee {
+    from {
+        transform: translateX(100%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-100%); /* End at the left */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust header layout for smaller screens */
+    .header {
+        flex-direction: column; /* Stack logo and title vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+    .header .title {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px; /* Add top margin for spacing */
+        font-size: 18px; /* Slightly smaller font size */
+    }
+    /* Center navigation items */
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 5px; /* Add bottom margin for spacing */
+    }
+    /* Adjust official card layout for smaller screens */
+    .official-card {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+    .official-card img {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+    }
+    /* Reduce maximum image height */
+    .imgheight {
+        max-height: 300px;
+    }
+}
+
+/* Further responsive adjustments for even smaller screens */
+@media (max-width: 576px) {
+    .header .logo img {
+        max-height: 50px; /* Further reduce logo size */
+    }
+    .header .title {
+        font-size: 16px; /* Even smaller title font size */
+    }
+    /* Adjust grid layout for places to visit */
+    .places-in-ongole-tovisit-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .places-in-ongole-tovisit-card h5 {
+        font-size: 14px; /* Smaller heading font size */
+    }
+    .places-in-ongole-tovisit-card img {
+        height: 120px; /* Reduce image height */
+    }
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #36454F; /* Dark gray background */
+    color: #f8f8f8; /* Light text color */
+    padding: 20px; /* Padding around the footer */
+    font-size: 0.9em; /* Slightly smaller font size */
+}
+
+.footer-container {
+    max-width: 960px; /* Maximum width of the footer content */
+    margin: 0 auto; /* Center the footer content */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between child elements */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding-bottom: 20px; /* Bottom padding */
+    border-bottom: 1px solid #555; /* Light border at the bottom */
+}
+
+.about-ongole, .quick-links, .contact-us {
+    flex: 1; /* Distribute available space equally */
+    margin-bottom: 20px; /* Bottom margin for each section */
+}
+
+/* Adjust width for better spacing */
+.about-ongole {
+    min-width: 30%;
+}
+
+.quick-links {
+    min-width: 20%;
+}
+
+.contact-us {
+    min-width: 30%;
+    text-align: left; /* Align text to the left */
+}
+
+h3 {
+    color: #f8f8f8; /* Light heading color */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 10px; /* Bottom margin */
+    font-size: 1.1em; /* Slightly larger font size */
+}
+
+p {
+    line-height: 1.6; /* Increased line height for readability */
+    margin-bottom: 8px; /* Bottom margin for paragraphs */
+}
+
+ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    margin-bottom: 5px; /* Bottom margin for list items */
+}
+
+a {
+    color: #f8f8f8; /* Light link color */
+    text-decoration: none; /* Remove underlines */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.developed-by-dropdown {
+    position: relative; /* For positioning the dropdown content */
+    display: inline-block; /* Allows setting width and height */
+    margin-top: 10px; /* Top margin */
+}
+
+.developed-by-button {
+    background-color: transparent; /* Transparent background */
+    color: #f8f8f8; /* Light text color */
+    border: none; /* Remove border */
+    padding: 5px 0; /* Vertical padding */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    font-size: 0.9em; /* Slightly smaller font size */
+}
+
+.developed-by-content {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position relative to the dropdown button */
+    background-color: #444; /* Darker background for the dropdown */
+    min-width: 120px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow for the dropdown */
+    z-index: 1; /* Ensure it's above other elements */
+    text-align: left; /* Align text to the left */
+}
+
+.developed-by-content a {
+    color: #f8f8f8; /* Light link color */
+    padding: 10px 15px; /* Padding for links */
+    text-decoration: none; /* Remove underlines */
+    display: block; /* Make each link a block element */
+}
+
+.developed-by-content a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+.developed-by-dropdown:hover .developed-by-content {
+    display: block; /* Show the dropdown on hover */
+}
+
+.copyright {
+    text-align: center; /* Center the copyright text */
+    padding-top: 15px; /* Top padding */
+    margin-top: 15px; /* Top margin */
+}
