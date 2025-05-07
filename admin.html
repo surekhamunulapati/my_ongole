@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .modal-card {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .modal-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .modal-card img {
+            width: 100%;
+            height: 280px;
+            margin-bottom: 10px;
+        }
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 35s linear infinite;
+    font-weight: bold;
+    padding-left: 100%;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <div class="marquee-container">
+        <div class="marquee-text">
+            Ongole, Prakasam district, Andhra Pradesh 523001
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg" style="background: linear-gradient(to right, #0052cc, #007bff); padding: 10px;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center text-white" href="#">
+                <img src="./IMAGES/logo.jpeg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top me-2">
+                <div>
+                    <strong>Ongole cityPortal</strong><br>
+                    <small>Official Portal of Ongole City</small>
+                </div>
+            </a>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row gap-3">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                        Government
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="govDropdown">
+                        <a class="dropdown-item" href="./law.html">Law & Order</a>
+                        <a class="dropdown-item" href="./admin.html">Administration</a>
+                        <a class="dropdown-item" href="./health.html">Health Services</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../HTMLpages/events.html">Events & Festivals</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                        Developed by
+                    </a>
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="#">V. Mounika</a>
+                        <a class="dropdown-item" href="#">T. Surekha</a>
+                        <a class="dropdown-item" href="#">M. Lakshmi</a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="mb-4">Administration Services</h2>
+        <div class="row">
+            <!-- Collector Office Modal Card -->
+            <div class="col-md-6">
+                <div class="modal-card text-center p-3" data-bs-toggle="modal" data-bs-target="#collectorModal">
+                    <img src="C:\HTML\FEproject\HTMLpages\IMAGES\collectoroffice.png" alt="Collector Office">
+                    <h5>Collector Office</h5>
+                    <p>Administrative hub for government services and public welfare.</p>
+                </div>
+            </div>
+            <!-- Municipal Office Modal Card -->
+            <div class="col-md-6">
+                <div class="modal-card text-center p-3" data-bs-toggle="modal" data-bs-target="#municipalModal">
+                    <img src="C:\HTML\FEproject\HTMLpages\IMAGES\municipalofc.jpg" alt="Municipal Office">
+                    <h5>Municipal Office</h5>
+                    <p>Urban planning, sanitation, and civic administration services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collector Office Modal -->
+    <div class="modal fade" id="collectorModal" tabindex="-1" aria-labelledby="collectorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="collectorModalLabel">Collector Office</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The Collector Office oversees district administration, revenue management, and public welfare initiatives.</p>
+                    <p>📍 <strong>Location:</strong> Collector Office, Ongole, Prakasam District, Andhra Pradesh - 523001</p>
+                    <p>📞 <strong>Contact:</strong> 08592-XXXXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Municipal Office Modal -->
+    <div class="modal fade" id="municipalModal" tabindex="-1" aria-labelledby="municipalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="municipalModalLabel">Municipal Office</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The Municipal Office manages urban planning, sanitation, water supply, and waste management.</p>
+                    <p>📍 <strong>Location:</strong> Municipal Office, Ongole, Prakasam District, Andhra Pradesh - 523001</p>
+                    <p>📞 <strong>Contact:</strong> 08592-XXXXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

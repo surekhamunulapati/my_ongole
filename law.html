@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Modals Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .modal-card {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            padding: 15px; /* Adjusted padding */
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 320px; /* Adjusted fixed height */
+            text-align: center;
+        }
+        .modal-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .modal-card img {
+            width: 100%;
+            height: auto;
+            max-height: 180px; /* Adjusted max-height for images */
+            object-fit: cover; /* Ensure images fill the space */
+            margin-bottom: 10px;
+            border-radius: 5px; /* Optional: Add slight border-radius to images */
+        }
+        .modal-card h5 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .modal-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Responsive adjustments for smaller screens (tablets and below) */
+        @media (max-width: 992px) {
+            .col-md-4 {
+                margin-bottom: 20px;
+            }
+            .modal-card {
+                height: auto;
+                min-height: 280px; /* Adjusted min-height for responsiveness */
+                align-items: stretch;
+            }
+            .modal-card img {
+                max-height: 200px;
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Further adjustments for even smaller screens (phones) */
+        @media (max-width: 576px) {
+            .modal-card {
+                min-height: 260px;
+            }
+            .modal-card img {
+                max-height: 150px;
+                margin-bottom: 10px;
+            }
+            .modal-card h5 {
+                font-size: 1rem;
+            }
+            .modal-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="mb-4">Law & Order Services</h2>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="modal-card text-center p-3" data-bs-toggle="modal" data-bs-target="#policeModal">
+                    <img src="./police.jpg" class="img-fluid" alt="Ongole court">
+                    <h5>Police Services</h5>
+                    <p>Ensuring public safety and enforcing laws.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="modal-card text-center p-3" data-bs-toggle="modal" data-bs-target="#courtModal">
+                    <img src="./IMAGES/court.jpg" class="img-fluid" alt="Court">
+                    <h5>Judicial Services</h5>
+                    <p>Handling legal disputes and justice matters.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="modal-card text-center p-3" data-bs-toggle="modal" data-bs-target="#trafficModal">
+                    <img src="C:\HTML\FEproject\HTMLpages\IMAGES\traffic.jpg" class="img-fluid" alt="Traffic">
+                    <h5>Traffic Management</h5>
+                    <p>Regulating and managing road safety.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="policeModal" tabindex="-1" aria-labelledby="policeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="policeModalLabel">Police Services</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ongole City Police is responsible for maintaining law and order, crime prevention, and public safety.
+                    They ensure smooth functioning of civic life by implementing various security measures.
+                    The headquarters of Ongole Police is located in the Prakasam District, and they are well-equipped with modern surveillance systems.</p>
+                    <p>🚔 <strong>Emergency Contact:</strong> Dial <strong>100</strong></p>
+                    <p>📍 <strong>Ongole Police Station Address:</strong> <br>
+                        Ongole Town Police Station, Trunk Road, Ongole, Andhra Pradesh - 523001</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="courtModal" tabindex="-1" aria-labelledby="courtModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courtModalLabel">Judicial Services</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The Ongole Court handles civil, criminal, and family disputes. It serves as the District Court of Prakasam District, ensuring justice is delivered fairly and efficiently.</p>
+                    <p>The court follows the Andhra Pradesh Judicial System and plays a crucial role in legal matters, dispute resolution, and case hearings.</p>
+                    <p>⚖️ <strong>Address:</strong> <br>
+                        District Court, Ongole, Prakasam District, Andhra Pradesh - 523001</p>
+                    <p>🕒 <strong>Timings:</strong> Monday to Saturday, 10:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="trafficModal" tabindex="-1" aria-labelledby="trafficModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="trafficModalLabel">Traffic Management</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The Ongole Traffic Police ensures smooth movement of vehicles and pedestrian safety by implementing traffic rules, monitoring CCTV surveillance, and managing road congestion.</p>
+                    <p>They conduct regular drives against traffic violations such as signal jumping, over-speeding, and drunk driving.</p>
+                    <p>🚦 <strong>Important Traffic Rules in Ongole:</strong></p>
+                    <ul>
+                        <li>✅ Wearing a helmet is mandatory for two-wheeler riders.</li>
+                        <li>🚫 Drunk driving results in heavy fines and legal action.</li>
+                        <li>🅿️ Strict no-parking zones in busy areas like Trunk Road and RTC Bus Stand.</li>
+                    </ul>
+                    <p>📞 <strong>Contact Ongole Traffic Police:</strong> Dial <strong>1091</strong> for road emergencies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

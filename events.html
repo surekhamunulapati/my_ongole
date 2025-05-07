@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Festivals - Ongole</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .event-card {
+            background-color: #fff;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        }
+
+        .event-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero {
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .custom-marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 0;
+  font-weight: bold;
+  position: relative;
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-scroll 15s linear infinite;
+  padding-left: 100%;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+    </style>
+</head>
+<body>
+   <!-- Working Marquee Alternative -->
+<div class="custom-marquee">
+    <div class="scrolling-text">
+      Ongole, Prakasam district, Andhra Pradesh 523001
+    </div>
+  </div>
+  
+   
+<!-- Blue Header with Logo and Title -->
+<div class="d-flex align-items-center px-3 py-2" style="background: linear-gradient(to right, #0052cc, #007bff); color: white;">
+    <img src="./IMAGES/logo.jpeg" alt="Ongole logo" width="60" height="60" class="mr-3">
+    <div>
+        <h4 class="mb-0 font-weight-bold">Ongole cityPortal</h4>
+        <small>Official Portal of Ongole City</small>
+    </div>
+</div>
+
+<!-- Navigation Menu -->
+<nav class="navbar navbar-expand-lg" style="background-color: #0047AB;">
+    <div class="container">
+        <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white font-weight-bold" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white font-weight-bold" href="#" id="governmentDropdown" role="button" data-toggle="dropdown">
+                        Government
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./law.html">Law & Order</a>
+                        <a class="dropdown-item" href="./admin.html">Administration</a>
+                        <a class="dropdown-item" href="./health.html">Health Services</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white font-weight-bold" href="../HTMLpages/events.html">Events & Festivals</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white font-weight-bold" href="#" id="developedDropdown" role="button" data-toggle="dropdown">
+                        Developed by
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">V. Mounika</a>
+                        <a class="dropdown-item" href="#">T. Surekha</a>
+                        <a class="dropdown-item" href="#">M. Lakshmi</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero text-white text-center py-5" style="background: url('festival-bg.jpg') no-repeat center center/cover;">
+    <div class="container">
+        <h1 class="display-4">Famous Events & Festivals of Ongole</h1>
+        <p class="lead">Discover the vibrant celebrations of Ongole.</p>
+        <a href="#events-section" class="btn btn-warning btn-lg">Explore Now</a>
+    </div>
+</header>
+
+<!-- Events Section -->
+<section id="events-section" class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="event-card p-4 border rounded shadow-sm">
+                <h3 class="event-title">Makara Sankranti</h3>
+                <p>A major harvest festival celebrated with traditional Rangoli, kites, and delicious sweets.</p>
+                <p class="extra-content" style="display: none;">
+                    <img src="./IMAGES/fest2.jpg" alt="sankranthi image" width="100%" height="100%">
+                    <strong>Sankranti Celebrations:</strong> Sankranti is marked by traditional events such as bull races and ram fights. The city buzzes with markets, festivities, and cultural events.
+                </p>
+                <button class="btn btn-info read-more">Read More</button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="event-card p-4 border rounded shadow-sm">
+                <h3 class="event-title">Ugadi</h3>
+                <p>The Telugu New Year celebrated with joy, special dishes, and cultural programs.</p>
+                <p class="extra-content" style="display: none;">
+                    <img src="./IMAGES/ugadi.jpg" alt="Ugadi image" width="100%" height="100%">
+                    <strong>Ugadi Celebrations:</strong> Includes rituals, mango decorations, and dishes like Ugadi Pachadi symbolizing life’s flavors.
+                </p>
+                <button class="btn btn-info read-more">Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="event-card p-4 border rounded shadow-sm">
+                <h3 class="event-title">Vinayaka Chavithi</h3>
+                <p>People celebrate Lord Ganesha's birthday with grand processions and clay idols.</p>
+                <p class="extra-content" style="display: none;">
+                    <img src="./IMAGES/ganesh.cms" alt="Vinayaka Chavithi image" width="100%" height="100%">
+                    <strong>Vinayaka Chavithi:</strong> Idols, rituals, sweets, cultural events and processions. Final day involves immersion and chants.
+                </p>
+                <button class="btn btn-info read-more">Read More</button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="event-card p-4 border rounded shadow-sm">
+                <h3 class="event-title">Kalaralu</h3>
+                <p>Kalaralu is a unique festival in Ongole that reflects rural traditions and heritage.</p>
+                <p class="extra-content" style="display: none;">
+                    <img src="./IMAGES/fest1.jpg" alt="Kalaralu Festival" width="100%" height="100%">
+                    <strong>Kalaralu Festival:</strong> Features bull races, folk dances, and mythological drama—showcasing Ongole’s folk legacy.
+                </p>
+                <button class="btn btn-info read-more">Read More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white text-center py-3">
+    <p>© 2025 Ongole City Portal. All Rights Reserved.</p>
+</footer>
+
+<!-- jQuery Script for Toggle -->
+<script>
+    $(document).ready(function () {
+        $(".read-more").click(function () {
+            var extraContent = $(this).siblings(".extra-content");
+            if (extraContent.is(":visible")) {
+                extraContent.slideUp();
+                $(this).text("Read More");
+            } else {
+                extraContent.slideDown();
+                $(this).text("Read Less");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

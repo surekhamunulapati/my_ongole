@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .modal-card {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .modal-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .modal-card img {
+            width: 100%;
+            height: 280px;
+            margin-bottom: 10px;
+        }
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 35s linear infinite;
+    font-weight: bold;
+    padding-left: 100%;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+    </style>
+</head>
+<body>
+     <!-- Navbar Section -->
+     <div class="marquee-container">
+        <div class="marquee-text">
+            Ongole, Prakasam district, Andhra Pradesh 523001
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg" style="background: linear-gradient(to right, #0052cc, #007bff); padding: 10px;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center text-white" href="#">
+                <img src="./IMAGES/logo.jpeg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top me-2">
+                <div>
+                    <strong>Ongole cityPortal</strong><br>
+                    <small>Official Portal of Ongole City</small>
+                </div>
+            </a>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row gap-3">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                        Government
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="govDropdown">
+                        <a class="dropdown-item" href="./law.html">Law & Order</a>
+                        <a class="dropdown-item" href="./admin.html">Administration</a>
+                        <a class="dropdown-item" href="./health.html">Health Services</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../HTMLpages/events.html">Events & Festivals</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                        Developed by
+                    </a>
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="#">V. Mounika</a>
+                        <a class="dropdown-item" href="#">T. Surekha</a>
+                        <a class="dropdown-item" href="#">M. Lakshmi</a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="mb-4">Healthcare Services</h2>
+        <div class="row">
+            <!-- Government Hospital Modal Card -->
+            <div class="col-md-6">
+                <div class="modal-card text-center p-3" data-bs-toggle="modal" data-bs-target="#hospitalModal">
+                    <img src="C:\HTML\FEproject\HTMLpages\IMAGES\govthosp.png" alt="Government Hospital">
+                    <h5>Government Hospital</h5>
+                    <p>Providing emergency and specialized medical services to the public.</p>
+                </div>
+            </div>
+            <!-- Primary Health Center Modal Card -->
+            <div class="col-md-6">
+                <div class="modal-card text-center p-3" data-bs-toggle="modal" data-bs-target="#phcModal">
+                    <img src="C:\HTML\FEproject\HTMLpages\IMAGES\rimshospital" alt="Primary Health Center">
+                    <h5>Primary Health Center</h5>
+                    <p>Basic healthcare and preventive services for rural and urban populations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Government Hospital Modal -->
+    <div class="modal fade" id="hospitalModal" tabindex="-1" aria-labelledby="hospitalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hospitalModalLabel">Government Hospital</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The Government Hospital offers 24/7 emergency care, surgeries, and specialist consultations.</p>
+                    <p>📍 <strong>Location:</strong> Govt. Hospital, Ongole, Prakasam District, Andhra Pradesh - 523001</p>
+                    <p>📞 <strong>Contact:</strong> 08592-XXXXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Primary Health Center Modal -->
+    <div class="modal fade" id="phcModal" tabindex="-1" aria-labelledby="phcModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="phcModalLabel">Primary Health Center</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The Primary Health Center provides vaccinations, maternity care, and routine check-ups.</p>
+                    <p>📍 <strong>Location:</strong> PHC, Ongole, Prakasam District, Andhra Pradesh - 523001</p>
+                    <p>📞 <strong>Contact:</strong> 08592-XXXXX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
