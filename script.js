@@ -4,9 +4,9 @@ function navigateToPage(place) {
         "Sirigiri Temple": "sirigiri.html",
         "About Ongole": "aboutongole.html",
         "Kalvari Temple": "kalvari.html",
-        "Mallavaram Dam": "mallavaramdam.html",
+        "Mallavaram Dam": "Mallavaramdam.html",
         "Kothapatnam Beach": "kothapatnam.html",
-        "ChennakesavaSwamy Temple": "chennakesava.html",
+        "ChennakesavaSwamy Temple": "Chennakesava.html",
         "Nalluri Gardens": "nalluri.html",
         "Rangarayudu cheruvu": "rangarayudu.html",
         "law":"law.html"
